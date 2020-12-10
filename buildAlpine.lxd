@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+lxc launch images:alpine/3.12 testChamber
+
+lxc exec testChamber -- \
+        apk update && \
+        apk upgrade
+
+lxc exec testChamber -- \
+        apk add \
+        sed \
+        attr \
+        dialog dialog-doc \
+        bash bash-doc bash-completion \
+        grep grep-doc \
+        coreutils coreutils-doc\
+        pciutils usbutils binutils findutils \
+        readline \
+        man-pages \
+        lsof lsof-doc \
+        less less-doc \
+        nano nano-doc \
+        curl curl-doc
