@@ -4,7 +4,9 @@
 lxc launch images:alpine/3.12 testChamber
 
 lxc exec testChamber -- \
-        apk update && \
+        apk update
+        
+lxc exec testChamber -- \
         apk upgrade
 
 lxc exec testChamber -- \
