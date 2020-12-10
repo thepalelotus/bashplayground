@@ -1,0 +1,6 @@
+#!/bin/bash
+
+lxc stop testChamber && \
+        lxc delete testChamber
+
+lxc list
