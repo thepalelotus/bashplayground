@@ -1,0 +1,10 @@
+#!/bin/bash
+
+lxc exec testChamber -- \
+        apk update
+
+lxc exec testChamber -- \
+        apk upgrade
+
+lxc exec testChamber -- \
+        /bin/bash
